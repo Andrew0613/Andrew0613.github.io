@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-10T16:01:25+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yuandong Pu</title><subtitle>蒲沅东</subtitle><entry><title type="html">The Second Half</title><link href="http://localhost:4000/The-Second-Half/" rel="alternate" type="text/html" title="The Second Half" /><published>2025-04-10T00:00:00+08:00</published><updated>2025-04-10T00:00:00+08:00</updated><id>http://localhost:4000/The%20Second%20Half</id><content type="html" xml:base="http://localhost:4000/The-Second-Half/"><![CDATA[<p>tldr: We’re at AI’s halftime.</p>
+
+<p>For decades, AI has largely been about developing new training methods and models. And it worked: from beating world champions at chess and Go, surpassing most humans on the SAT and bar exams, to earning IMO and IOI gold medals. Behind these milestones in the history book — DeepBlue, AlphaGo, GPT-4, and the o-series — are fundamental innovations in AI methods: search, deep RL, scaling, and reasoning. Things just get better over time.</p>
+
+<p>So what’s suddenly different now?</p>
+
+<p>In three words: RL finally works. More precisely: RL finally generalizes. After several major detours and a culmination of milestones, we’ve landed on a working recipe to solve a wide range of RL tasks using language and reasoning. Even a year ago, if you told most AI researchers that a single recipe could tackle software engineering, creative writing, IMO-level math, mouse-and-keyboard manipulation, and long-form question answering — they’d laugh at your hallucinations. Each of these tasks is incredibly difficult and many researchers spend their entire PhDs focused on just one narrow slice.</p>
+
+<p>Yet it happened.</p>
+
+<p>So what comes next? The second half of AI — starting now — will shift focus from solving problems to defining problems. In this new era, evaluation becomes more important than training. Instead of just asking, “Can we train a model to solve X?”, we’re asking, “What should we be training AI to do, and how do we measure real progress?” To thrive in this second half, we’ll need a timely shift in mindset and skill set, ones perhaps closer to a product manager.</p>
+
+<h2 id="the-first-half">The first half</h2>
+
+<p>To make sense of the first half, look at its winners. What do you consider to be the most impactful AI papers so far?</p>
+
+<p>I tried the quiz in Stanford 224N, and the answers were not surprising: Transformer, AlexNet, GPT-3, etc. What’s common about these papers? They propose some fundamental breakthroughs to train better models. But also, they managed to publish their papers by showing some (significant) improvements on some benchmarks.</p>
+
+<p>There is a latent commonality though: these “winners” are all training methods or models, not benchmarks or tasks. Even arguably the most impactful benchmark of all, ImageNet, has less than one third of the citation of AlexNet. The contrast of method vs benchmark is even more drastic anywhere else —- for example, the main benchmark of Transformer is WMT’14, whose workshop report has ~1,300 citations, while Transformer had &gt;160,000.</p>
+
+<p><img src="/images/second_half/first_half.png" alt="first_half" /></p>
+
+<p>That illustrates the game of the first half: focus on building new models and methods, and evaluation and benchmark are secondary (although necessary to make the paper system work).</p>
+
+<p>Why? A big reason is that, in the first half of AI, methods were harder and more exciting than tasks. Creating a new algorithm or model architecture from scratch – think of breakthroughs like the backpropagation algorithm, convolutional networks (AlexNet), or the Transformer used in GPT-3 – required remarkable insight and engineering. In contrast, defining tasks for AI often felt more straightforward: we simply took tasks humans already do (like translation, image recognition, or chess) and turned them into benchmarks. Not much insight or even engineering.</p>
+
+<p>Methods also tended to be more general and widely applicable than individual tasks, making them especially valuable. For example, the Transformer architecture ended up powering progress in CV, NLP, RL, and many other domains – far beyond the single dataset (WMT’14 translation) where it first proved itself. A great new method can hillclimb many different benchmarks because it’s simple and general, thus the impact tends to go beyond an individual task.</p>
+
+<p>This game has worked for decades and sparked world-changing ideas and breakthroughs, which manifested themselves by ever-increasing benchmark performances in various domains. Why would the game change at all? Because the cumulation of these ideas and breakthroughs have made a qualitative difference in creating a working recipe in solving tasks.</p>
+
+<h2 id="the-recipe">The recipe</h2>
+
+<p>What’s the recipe? Its ingredients, not surprisingly, include massive language pre-training, scale (in data and compute), and the idea of reasoning and acting. These might sound like buzzwords that you hear daily in SF, but why call them a recipe??</p>
+
+<p>We can understand this by looking through the lens of reinforcement learning (RL), which is often thought of as the “end game” of AI — after all, RL is theoretically guaranteed to win games, and empirically it’s hard to imagine any superhuman systems (e.g. AlphaGo) without RL.</p>
+
+<p>In RL, there are three key components: <strong>algorithm, environment, and priors</strong>. For a long time, RL researchers focused mostly on the algorithm (e.g. REINFORCE, DQN, TD-learning, actor-critic, PPO, TRPO…) – the intellectual core of how an agent learns – while treating the environment and priors as fixed or minimal. For example, Sutton and Barto’s classical textbook is all about algorithms and almost nothing about environments or priors.</p>
+
+<p><img src="/images/second_half/rl_book.png" alt="first_half" /></p>
+
+<p>However, in the era of deep RL, it became clear that environments matter a lot empirically: an algorithm’s performance is often highly specific to the environment it was developed and tested in. If you ignore the environment, you risk building an “optimal” algorithm that only excels in toy settings. So why don’t we first figure out the environment we actually want to solve, then find the algorithm best suited for it?</p>
+
+<p>That’s exactly OpenAI’s initial plan. It built <a href="https://openai.com/index/openai-gym-beta/">gym</a>, a standard RL environment for various games, then the <a href="https://openai.com/index/universe/">World of Bits and Universe projects</a>, trying to turn the Internet or computer into a game. A good plan, isn’t it? Once we turn all digital worlds into an environment, solve it with smart RL algorithms, we have digital AGI.</p>
+
+<p>A good plan, but not entirely working. OpenAI made tremendous progress down the path, using RL to solve <a href="https://openai.com/index/openai-five-defeats-dota-2-world-champions/">Dota</a>, <a href="https://openai.com/index/solving-rubiks-cube/">robotic hands</a>, etc. But it never came close to solving computer use or web navigation, and the RL agents working in one domain do not transfer to another. Something is missing.</p>
+
+<p>Only after GPT-2 or GPT-3, it turned out that the missing piece is priors. You need powerful language pre-training to distill general commonsense and language knowledge into models, which then can be fine-tuned to become web (WebGPT) or chat (ChatGPT) agents (and change the world). <strong>It turned out the most important part of RL might not even be the RL algorithm or environment, but the priors, which can be obtained in a way totally unrelated from RL.</strong></p>
+
+<p>Language pre-training created good priors for chatting, but not equally good for controlling computers or playing video games. Why? These domains are further from the distribution of Internet text, and naively doing SFT / RL on these domains generalizes poorly. I noticed the problem in 2019, when GPT-2 just came out and I did SFT / RL on top of it to solve text-based games - <a href="https://arxiv.org/abs/2010.02903">CALM</a> was the first agent in the world built via pre-trained language models. But it took millions of RL steps for the agent to hillclimb a single game, and it doesn’t transfer to new games. Though that’s exactly the characteristic of RL and nothing strange to RL researchers, I found it weird because we humans can easily play a new game and be significantly better zero-shot. Then I hit one of the first eureka moment in my life - we generalize because we can choose to do more than “go to cabinet 2” or “open chest 3 with key 1” or “kill dungeon with sword”, we can also choose to think about things like “The dungeon is dangerous and I need a weapon to fight with it. There is no visible weapon so maybe I need to find one in locked boxes or chests. Chest 3 is in Cabinet 2, let me first go there and unlock it”.</p>
+
+<p><img src="/images/second_half/reasoning.png" alt="reasoning" /></p>
+
+<p>Thinking, or reasoning, is a <strong>strange</strong> kind of action - it does not directly affect the external world, yet the space of reasoning is open-ended and combintocially infinite — you can think about a word, a sentence, a whole passage, or 10000 random English words, but the world around you doesn’t immediate change. In the classical RL theory, it is a terrible deal and makes decision-making impossible. Imagine you need to choose one out of two boxes, and there’s only one box with $1M and the other one empty. You’re expected to earn $500k. Now imagine I add infinite empty boxes. You’re expected to earn nothing. But by adding reasoning into the action space of any RL environment, we make use of the language pre-training priors to generalize, and we afford to have flexible test-time compute for different decisions. It is a really <strong>magical</strong> thing and I apologize for not fully making sense of it here, I might need to write another blog post just for it. You’re welcome to read <a href="https://arxiv.org/abs/2210.03629">ReAct</a> for the original story of reasoning for agents and read my vibes at the time. For now, my intuitive explanation is: even though you add infinite empty boxes, you have seen them throughout your life in all kinds of games, and choosing these boxes prepare you to better choose the box with money for any given game. My abstract explanation would be: <strong>language generalizes through reasoning in agents</strong>.</p>
+
+<p>Once we have the right RL priors (language pre-training) and RL environment (adding language reasoning as actions), it turns out RL algorithm might be the most trivial part. Thus we have o-series, R1, deep research, computer-using agent, and so much more to come. What a sarcastic turn of events! For so long RL researchers cared about algorithms way more than environments, and no one paid any attention to priors — all RL experiments essentially start from scratch. But it took us decades of detours to realize maybe our prioritization should have be completely reversed.</p>
+
+<p>But just like Steve Jobs said: You can’t connect the dots looking forward; you can only connect them looking backward.</p>
+
+<h2 id="the-second-half">The second half</h2>
+
+<p>This recipe is completely changing the game. To recap the game of the first half:</p>
+<ul>
+  <li>We develop novel training methods or models that hillclimb benchmarks.</li>
+  <li>We create harder benchmarks and continue the loop.</li>
+</ul>
+
+<p>This game is being ruined because:</p>
+<ul>
+  <li>The recipe has essentially standardized and industried benchmark hillclimbing without requiring much more new ideas. As the recipe scales and generalizes well, your novel method for a particular task might improve it by 5%, while the next o-series model improve it by 30% without explicitly targeting it.</li>
+  <li>Even if we create harder benchmarks, pretty soon (and increasingly soon) they get solved by the recipe. My colleague Jason Wei made a beautiful figure to visualize the trend well:</li>
+</ul>
+
+<p><img src="/images/second_half/progress.jpeg" alt="progress" /></p>
+
+<p>Then what’s left to play in the second half? If novel methods are no longer needed and harder benchmarks will just get solved increasingly soon, what should we do?</p>
+
+<p>I think <strong>we should fundamentally re-think evaluation</strong>. It means not just to create new and harder benchmarks, but to fundamentally question existing evaluation <strong>setups</strong> and create new ones, so that we are forced to invent new methods beyond the working recipe. It is hard because humans have inertia and seldom question basic assumptions - you just take them for granted without realizing they are assumptions, not laws.</p>
+
+<p>To explain inertia, suppose you invented <a href="https://arxiv.org/abs/2009.03300">one of the most successful evals in history based on human exams</a>. It was an extremely bold idea in 2021, but 3 years later it’s saturated. What would you do? Most likely create <a href="https://agi.safe.ai/">a much harder exam</a>. Or suppose you solved <a href="https://arxiv.org/pdf/2107.03374">simply coding tasks</a>. What would you do? Most likely find <a href="https://arxiv.org/pdf/2502.06807v1">harder coding tasks</a> to solve until you have reached IOI gold level.</p>
+
+<p>Inertia is natural, but here is the problem. AI has beat world champions at chess and Go, surpassed most humans on SAT and bar exams, and reached gold medal level on IOI and IMO. But the world hasn’t changed much, at least judged by economics and GDP.</p>
+
+<p>I call this the <strong>utility problem</strong>, and deem it the most important problem for AI.</p>
+
+<p>Perhaps we will solve the utility problem pretty soon, perhaps not. Either way, the root cause of this problem might be deceptively simple: <strong>our evaluation setups are different from real-world setups in many basic ways</strong>. To name two examples:</p>
+
+<ul>
+  <li><strong>Evaluation “should” run automatically</strong>, so typically an agent receives a task input, do things autonomously, then receive a task reward. But in reality, an agent has to engage with a human throughout the task — you don’t just text customer service a super long message, wait for 10 minutes, then expect a detailed response to settle everything. By questioning this setup, new benchmarks are invented to either engage real humans (e.g. <a href="https://lmarena.ai/">Chatbot Arena</a>) or user simulation (e.g. <a href="https://arxiv.org/abs/2406.12045">tau-bench</a>) in the loop.
+<img src="/images/second_half/tau.png" alt="tau" /></li>
+  <li><strong>Evaluation “should” run i.i.d.</strong> If you have a test set with 500 tasks, you run each task independently, average the task metrics, and get an overall metric. But in reality, you solve tasks sequentially rather than in parallel. A Google SWE solves google3 issues increasingly better as she gets more familiar with the repo, but a SWE agent solves many issues in the same repo without gaining such familiarity. We obviously need long-term memory methods (and <a href="https://arxiv.org/pdf/2409.07429">there</a> <a href="https://yitaoliu17.com/assets/pdf/ICLR_2025_CER.pdf">are</a>), but academia does not have the proper benchmarks to justify the need, or even the proper courage to question i.i.d. assumption that has been the foundation of machine learning.</li>
+</ul>
+
+<p>These assumptions have “always” been like this, and developing benchmarks in these assumptions were fine in the first half of AI, because <strong>when the intelligence is low, improving intelligence generally improves utility</strong>. But now, the general recipe is guaranteed to work under these assumptions. So the way to play the new game of the second half is</p>
+<ul>
+  <li>We develop novel evaluation setups or tasks for real-world utility.</li>
+  <li>We solve them with the recipe or augment the recipe with novel components. Continue the loop.</li>
+</ul>
+
+<p>This game is hard because it is unfamiliar. But it is exciting. While players in the first half solve video games and exams, players in the second half get to build billion or trillion dollar companies by building useful products out of intelligence. While the first half is filled with incremental methods and models, the second half filters them to some degree. The general recipe would just crush your incremental methods, unless you create new assumptions that break the recipe. Then you get to do truly game-changing research.</p>
+
+<p>Welcome to the second half!</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>This blog post is based on my talk given at Stanford 224N and Columbia. I used OpenAI deep research to read my slides and write a draft.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[tldr: We’re at AI’s halftime.]]></summary></entry><entry><title type="html">Ungrounded Meaning</title><link href="http://localhost:4000/Ungrounded-Meaning/" rel="alternate" type="text/html" title="Ungrounded Meaning" /><published>2021-04-24T00:00:00+08:00</published><updated>2021-04-24T00:00:00+08:00</updated><id>http://localhost:4000/Ungrounded%20Meaning</id><content type="html" xml:base="http://localhost:4000/Ungrounded-Meaning/"><![CDATA[<p>Thoughts on paper <a href="https://arxiv.org/abs/2104.10809">Provable Limitations of Acquiring Meaning from Ungrounded Form: What will Future Language Models Understand?</a> and beyond.</p>
+
+<h2 id="the-question">The Question</h2>
+
+<p>Can language <strong>meaning</strong> be learned from <strong>form</strong> alone?</p>
+
+<p>This is arguably the philosophial question most relevant to today’s NLP, asking if its data-driven paradigm is fundamentally sound. It sure feels politically correct to <a href="https://www.aclweb.org/anthology/2020.acl-main.463.pdf">say no</a>, but the detailed arguments and counter-arguments have produced a <a href="https://blog.julianmichael.org/2020/07/23/to-dissect-an-octopus.html">great debate</a>.</p>
+
+<p>My personal take:</p>
+
+<ul>
+  <li>Representations from learning on corpus (word2vec, BERT contextual embeddings) are obviously <strong>meaningful</strong>. I still remember the shock many years ago seeing <code class="language-plaintext highlighter-rouge">king - man + woman = queen</code>.</li>
+  <li>But whether such models have learned <strong>meaning</strong> require <strong>probing tasks</strong> that specify how a model shall behave if it learns language meaning. On many tasks (dialogue, storytelling, …) current NLP models perform poorly, and even huger corpus doesn’t seem a path to solving these.</li>
+  <li>The tricky thing about probing tasks is that, your model will always get grounded when fine-tuned - you gain inductive bias about <strong>task intent</strong> through new data or new optimization or new parameters. In a sense, a toehold of grounding (or inductive bias) bootstraps the learning of meaning (and pre-training might make learning much faster and easier). But no matter how much power you gain from pre-training on form alone, you just can’t jump without a toehold of ground to jump from!
+    <ul>
+      <li>The empirical question is <strong>how large the toehold should be</strong>, so that empirical numbers make most sense.</li>
+      <li>The theoretical question is: <strong>how small the toehold could be</strong>, so that learning meaning can be bootstrapped?</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="https://arxiv.org/abs/2104.10809">Provable Limitations of Acquiring Meaning from Ungrounded Form: What will Future Language Models Understand?</a> is an interesting step toward the theoretical question. It argues meaning cannot be learned even with a <em>seemingly huge toehold</em>: the ability to query oracle if two texts have the same (contextual) meaning.</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>You can’t learn a Python compiler from just seeing Python code, since you don’t get to obserse any input/output execution results. But what if code is equipped with assertions?</p>
+
+<pre><code class="language-Python">a = 3 + 5
+assert a == 8
+</code></pre>
+
+<p>You may learn some meaning from it!</p>
+
+<p>To be even more generuous, assume assertions are on your side. You get to choose two strings <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> to query, and assertion <code class="language-plaintext highlighter-rouge">assert x == y</code> tell you if they evaluate to the same value within their respective context.</p>
+
+<p>For example, let <code class="language-plaintext highlighter-rouge">x</code> be</p>
+
+<pre><code class="language-Python">a += 5
+</code></pre>
+
+<p>and let <code class="language-plaintext highlighter-rouge">y</code> be</p>
+
+<pre><code class="language-Python">a += 2; if True: a += 3
+</code></pre>
+
+<p>They should be equivalent no matter what code precedes them, therefore they should have the same representation.</p>
+
+<p><strong>The task is, assign each string <code class="language-plaintext highlighter-rouge">x</code> a representation <code class="language-plaintext highlighter-rouge">f(x)</code> , so that for any two strings, <code class="language-plaintext highlighter-rouge">f(x)=f(y)</code> iff <code class="language-plaintext highlighter-rouge">assert x==y</code> holds for all (valid) contexts.</strong></p>
+
+<p>A projection back to the meaning-probing-grounding framework:</p>
+
+<ul>
+  <li>Added probe data? <strong>Unlimited</strong>, as long as you can process in computable time. Or equivalently, your original corpus is designed best for you and you have zero new data.</li>
+  <li>Added probe power? <strong>Unlimited</strong>, in the sense that probe family is <em>any function</em> and you can choose the best function out of any function. Or equivalently, there is not probe <em>learning</em>, just about <em>existance</em>.</li>
+  <li>Added anything else? **Understand the meaning of word <code class="language-plaintext highlighter-rouge">assert </code> and the meaning of it combined with arbitrary statements **. That’s the only toehold from form to meaning in the setup.</li>
+  <li><em>Also note task is kind of harsh, you need representations to respect contextual equivalence for all strings and all contexts.</em></li>
+</ul>
+
+<h2 id="the-proof">The Proof</h2>
+
+<p><img src="/images/main.png" alt="main" /></p>
+
+<p>The idea of the proof is quite simple. Consider Python programs looking like either left or right, where <code class="language-plaintext highlighter-rouge">m</code> and <code class="language-plaintext highlighter-rouge">n</code> can be seen as integer constants. Here <code class="language-plaintext highlighter-rouge">tm_run</code> is essentially an Universal Turing Machine that takes Turing machine state <code class="language-plaintext highlighter-rouge">m</code> and returns Turing machine state <code class="language-plaintext highlighter-rouge">n</code> steps later.</p>
+
+<ul>
+  <li><strong>Oracle has no computability beyond Turing Machine</strong>, because for each concrete <code class="language-plaintext highlighter-rouge">n</code>, both programs can be run in finite time and compared.</li>
+  <li><strong>“Emulating meaning” requires solving the halting problem (for every <code class="language-plaintext highlighter-rouge">m</code>) and is not computable</strong>, because for a fixed <code class="language-plaintext highlighter-rouge">m</code>, if</li>
+</ul>
+
+<p><img src="/images/decide.png" alt="decide" /></p>
+
+<p>holds, it means it holds for all <code class="language-plaintext highlighter-rouge">n</code>, i.e. Turing Machine <code class="language-plaintext highlighter-rouge">m</code> does not halt. You simply can’t do that if your oracle isn’t beyond Turing Machine.</p>
+
+<h2 id="back-to-the-setup">Back to The Setup</h2>
+
+<p>I feel the main proof is rather tricky than insightful, and here are a few comments:</p>
+
+<ul>
+  <li>
+    <p>Humans also cannot “emulate meaning” in such a setup, since we can’t solve the halting problem either?</p>
+  </li>
+  <li>
+    <p>The considered language is too weak - just a tiny subset of possible Python programs, so that it makes oracle weaker (within TM) and task easier (but still beyond TM).</p>
+  </li>
+  <li>
+    <p>Power about language is you can talk about language itself, and that’s the essence of Turing Machine. In a “complete” language, from assertion</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Program m cannot halt in any finite steps
+</code></pre></div>    </div>
+
+    <p>you can gain meaning about program <code class="language-plaintext highlighter-rouge">m</code>. This is because you understand meanings of extra things like “any” or “finite”. <strong>So perhaps minimal grounding requires knowing meaning beyond <code class="language-plaintext highlighter-rouge">assert</code> - maybe some other elements like <code class="language-plaintext highlighter-rouge">or</code> <code class="language-plaintext highlighter-rouge">any</code> <code class="language-plaintext highlighter-rouge">if</code>……</strong></p>
+  </li>
+</ul>
+
+<h2 id="back-to-the-question">Back to The Question</h2>
+
+<ul>
+  <li>Theoretical question is hard, not yet well-defined. This paper seems to brings more question than answers.
+    <ul>
+      <li>Better setup or definition for “learning meaning” and “grounding” might be needed.</li>
+      <li>Especially, in language of logic, grounding and inductive bias are very similar, and are very tricky.</li>
+    </ul>
+  </li>
+  <li>Theoretical question might not be related to the empirical question (yet), especially when the theoretical question leads to negative answers.
+    <ul>
+      <li>Theory may not have been well-established, and setups are far from practice.</li>
+      <li>Even if the theory is well-established, think of worse-case time complexity analysis vs. practicatily of some algorithm.</li>
+    </ul>
+  </li>
+  <li>Key aspects about learning from form are still missing: modelling token co-occurance, for example, is not even touched in the paper. How co-occurance statistics lead to “structure” is still intriguing.</li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Thoughts on paper Provable Limitations of Acquiring Meaning from Ungrounded Form: What will Future Language Models Understand? and beyond.]]></summary></entry><entry><title type="html">Law</title><link href="http://localhost:4000/Law/" rel="alternate" type="text/html" title="Law" /><published>2020-09-06T00:00:00+08:00</published><updated>2020-09-06T00:00:00+08:00</updated><id>http://localhost:4000/Law</id><content type="html" xml:base="http://localhost:4000/Law/"><![CDATA[<p>一直想写的一个主题拖了很久：法律。</p>
+
+<h2 id="引子">引子</h2>
+
+<p>2020年6月2日，要投的会议竟然延期了两天，有种一鼓作气再而衰的感觉，很不适应。开始写这几个月看的三个作品：Better Call Saul，Legal High，和……罗翔。美国，日本，中国。悲剧，喜剧，非剧。共同点：关于法律。</p>
+
+<h2 id="better-call-saul-bcs">Better Call Saul (BCS)</h2>
+<p>时隔两年终于盼来了第五季，但看到一半甚至忘了为何这曾是我最爱的美剧。我依稀记得节奏慢，刺激少，但是这一季明显强化了这两个电视剧的“弱化”特征。第四季结尾，Jimmy开始Saul化，人人期待着黑化、堕落、罪恶、Breaking Bad。但是等来的是营业、推销、小打小闹、闪婚……人人期待着水化为汽的相变，却看到了临界点上无水无汽无相无界的<strong>连续相变</strong>。</p>
+
+<p>直到一百万美元保释的故事，铺垫爆发，一切又回来了。温度和压力回到了人们熟悉的一级相变区。</p>
+
+<p>BCS是一部结构与对称性的作品。美学的分镜和象征性只是次要的，其精华在于人物。剧里面的律师、商人、毒贩、打手、混混、警察，六道众生皆能力出众而囿于命运。新墨西哥州是美国和墨西哥的边界，法律是黑白两道的边界。Jimmy是双重边界的对称中心，穿越国境，打通黑白，是身不由己的渐变色。Gus从某种程度也是，不过Jimmy由白入黑喧闹的下降，而Gus由黑入白沉静的上升，双线的并行犹如隔着些许间距的流动的太极图，充满了对称美。</p>
+
+<p>命运塑造性格，性格决定命运，必然夹杂偶然，偶然汇入必然，故事就这样流淌。法律在故事里又是什么？是<strong>边界</strong>，划分着黑白、对错、善恶、命运。这边界看似严谨有力却时而模糊脆弱，因为法律的受众是人，而人性本就如此，用堂皇的形式包裹和约束幽暗。Chunk可能是坚守边界，更可能是在利用这边界的堂皇性。试探边界的深爱他的Jimmy被他以堂皇的理由幽暗地绞杀，自己也被幽暗的情感堂皇地吞噬。由此可见，试图玩弄、试探、利用、操纵这边界是危险的。大多数人身体远离国家边境的缺水沙漠，人性远离法律边境的道德沙漠，在舒适区走过了一生。BCS无非是血淋淋地记录了不这么幸运的人。问题是，他们的人性是<strong>更</strong>真实的吗？</p>
+
+<h2 id="legal-high">Legal High</h2>
+
+<p>新墨西哥的的律师挣扎于生死人性，东京的律师们忙碌于胜负价值。</p>
+
+<p>Legal High作为律政喜剧继承了日本职业剧的传统——<strong>快节奏</strong>导致不会过于沉重，导致人设不会过于复杂，但仍然试图夹杂着道理或情感。第一季的案子形形色色，古美门和黛的主要矛盾却一目了然：当律师为了赢，还是正义？法律成为了现实主义和理想主义的<strong>价值</strong>问题。经典的片段里，古美门指着开小店的大妈，用思想实验说明让看似“坏”的人输也可能导致“好”人损失。经典的台词是，<strong>“我们不是神，只是律师。”</strong>第二季没法不延续一些核心套路（也是日本快节奏剧的问题），所以引入新角色羽生搞一些似是而非的矛盾，主要问题成了，“为了局部（辩护人）利益还是整体利益”。这无非是上个问题的延续和拓展。</p>
+
+<p>黛的正义是天真的——知道真相，知道法律的边界，判断真相在边界的哪一侧。但是真相是不可知的，边界是模糊的。法律的实现在于说服：说服评审团/法官/舆论/证人/对手……改变人的心理。古美门就找到了赢的捷径：不是收集客观证据和对应法例（我吃惊于没有一句法律被真正读过），而是利用人的复杂和主观性，从案子之外的方面或诡辩搞定人。</p>
+
+<p>法律和政治一样，基于简单理想的价值公理，实践出复杂丑陋的种种推论。从希腊到美国的进步是，立法者和立政者的建模基础从理想人变成了现实人。亚里士多德谈论着完美的公民和君主，杰弗逊和富兰克林却警惕着权力滥用和愚民暴政，设计了三权分立和选举人团。但任何时代任何地方，法律和政治都基于辩论、说服、操纵人性。</p>
+
+<p>第二季的子主题也与之有关：民意能改变法律判决吗？民意能改变人，人决定法律判决，这是快回路。民意能改变政治，政治能改变法律，这是慢回路。快回路似乎是有悖于司法独立的，但是操纵人永远是可能的。</p>
+
+<h2 id="罗翔">罗翔</h2>
+
+<p>罗翔的网课/书真的很有意思。不像前面两个影视作品，这里真的介绍了法律的条文和判例。我却主要读的是前面刑法的基础：犯罪和量刑，没有真的仔细看后面的各个罪名。这里的法律的精神是什么？我觉得是<strong>常识，逻辑，妥协</strong>。</p>
+
+<p>常识是出发点，是源头。“符合伦理道德的一定不是违法”，说的就是法律不应违背其源头。</p>
+
+<p>逻辑是延伸性，是路径。数学的逻辑从集合论的出发点走出了自洽的种种美丽结构，法律的逻辑从常识的出发点却走出了无数的矛盾和困惑。终其原因，常识本身就是矛盾的。这种矛盾可能微小，却被逻辑的延伸层层放大。为什么过了21年的案子就无法追溯？因为约束刑罚的逻辑必然是限定犯罪追溯期。约束犯罪和约束刑罚的矛盾便在21年前强奸幼女的恶人不用坐牢的公愤中爆发。</p>
+
+<p>于是妥协是解决。常识有很多对立面：理想主义和现实主义，规则的严谨性和灵活性，保护受害人和保护罪犯（没错，这也是常识），乃至各个国家管辖权的矛盾。书中提到北欧刑法明显偏理想主义（刑罚更像教育？），美国很多州偏现实主义（犯罪最低年龄可以低至六岁），中国却往往”采用折衷说“，颇有中庸精神。无论如何妥协，目的都是让逻辑回归现实，回归常识。“法律的生命是经验而不是逻辑”，这也许就是数学和法律的最大区别。</p>
+
+<p>讽刺的是，我更喜欢前面逻辑和形而上的部分，后面具体而经验的反而兴趣不大。</p>
+
+<h2 id="bonus誓言白宫与最高法院">（Bonus）誓言：白宫与最高法院</h2>
+
+<p>上面三个作品探讨了法律的生活面、价值面、学术面，开了这个帖子后又看了一本超酷的书《誓言：白宫与最高法院》，探讨了法律的政治面。写这段时引子里的paper都快decision了……</p>
+
+<p>故事都是已知的新闻了。2009年美国最高法院首席大法官罗伯茨给奥巴马就职宣誓时说错誓词，导致第二天就职仪式重新进行；2012年最高法院就奥巴马医保违宪性形成4:4僵局时，共和党的罗伯茨选择了使用“罚金符合税金”的解释保护医保案，奥巴马政府的最大政治遗产。为什么超酷？因为这些人们不太重视的新闻（书里说大多数美国人甚至不知道三权分立的机构，何况最高法院的新闻）竟然有如此激烈的政治内涵，更因为从09年的引子到12年的高潮，作者硬是把新闻背后惊心动魄的人物角斗、政治博弈、剧情跌宕糅合成出色的法律故事。</p>
+
+<p>最低调、年老、枯燥的政府机构，背后却是最意外、有力、刺激的故事。因为最高法院法官往往是终身制的老人，而他们的某些判决会改变美国命运。布什戈尔案是一个例子，奥巴马医保案也是。前面说到法律的妥协，最高法院的九个法官就是这种终极平衡的体现——往往重要的案子都是5:4，在保守/进步势力大约4:4的情况下，一个毫不出名的中间派大法官就可以一定程度左右美国重要议题（堕胎、枪支、选举、平权）数十年。谁听说过安东尼·肯尼迪？</p>
+
+<p>当然，故事的主角是奥巴马和罗伯茨，两个同样无比聪明却不同立场和人生道路的哈佛精英，分别站在白宫和最高法院的巅峰。穿插描述的其他政府人员和法官让故事充满了舞台感和厚重感，仿佛两个主角在对视彼此准备着最后的决战——即使他们几乎从不接触。法律和政治的骨肉相连在故事里显而易见，其骨肉之腱为人——受过法律教育走上政治道路的一类传统公共精英。他们在民意和环境中选择方向，在规则下进一步改变规则。书中的环境是，<strong>法律和法院变得愈发政治化</strong>，确切的说，共和党在占领最高法院，保守势力在推翻一个个先例。法官们用不同的技术实现政治目的，颇具迷惑性的“法律原旨主义”看似去政治化，也无非是种辩术，并不比“司法能动主义”更高明或正确。法律根源处古老晦涩的宪法已经无力介入现代的种种命题，政治的肌肉不可避免地活动法律的骨头。有趣的无非是法官身为肌腱的人生故事。</p>
+
+<p>还有很多有趣的想法，可能会再写一篇AI视角的思考。</p>]]></content><author><name></name></author><summary type="html"><![CDATA[一直想写的一个主题拖了很久：法律。]]></summary></entry><entry><title type="html">Back</title><link href="http://localhost:4000/Back/" rel="alternate" type="text/html" title="Back" /><published>2020-05-16T00:00:00+08:00</published><updated>2020-05-16T00:00:00+08:00</updated><id>http://localhost:4000/Back</id><content type="html" xml:base="http://localhost:4000/Back/"><![CDATA[<p>今天一系列特定的环境刺激，变得很怀旧，把这个地方重新捡起来了。</p>
+
+<p>一个多小时二十几个commits的周折，终于是理想的Minimalism了。</p>
+
+<p>卧龙跃马终黄土，人事音书漫寂寥。前两天想起杜甫的诗有些低沉，像高中一样反复在纸上写着。很多人事物短短几年就难以回溯，例如OI时期的百度贴吧和空间（可能已经没什么人知道我在说什么）……</p>
+
+<p>但是反过来，无法在物理世界回溯却还是拥有精神世界的回忆，成为黄土后的诸葛亮分子还能够借助区区两个符号融入不腐的语言之河，将消散的故事以一种Minimalism的方式链接进千年的生活，这也是很神奇的。</p>
+
+<p>也可能是为什么还在研究智能和语言罢。</p>]]></content><author><name></name></author><summary type="html"><![CDATA[今天一系列特定的环境刺激，变得很怀旧，把这个地方重新捡起来了。]]></summary></entry></feed>
