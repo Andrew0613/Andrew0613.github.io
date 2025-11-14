@@ -56,6 +56,11 @@ My current research interest mainly lies in generative modeling and agents.
 
 ## Conference Papers
 
+- **SynWeather: Weather Observation Data Synthesis across Multiple Regions and Variables via a General Diffusion Transformer**
+    Kaiyi Xu, Junchao Gong, Zhiwang Zhou, Zhangrui Li, **Yuandong Pu**, Yihao Liu, Ben Fei, Fenghua Ling, Wenlong Zhang, Lei Bai <br>
+    AAAI 2026 Oral<br>
+    [arxiv](https://arxiv.org/abs/2511.08291) | [paper](https://arxiv.org/pdf/2511.08291)
+
 - **Learning A Low-Level Vision Generalist via Visual Task Prompt** <br>
     Xiangyu Chen, Yihao Liu, **Yuandong Pu**, Wenlong Zhang, Jiantao Zhou, Yu Qiao, Chao Dong† <br>
     ACM MM 2024 <br>
