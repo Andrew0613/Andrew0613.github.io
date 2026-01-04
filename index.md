@@ -22,6 +22,14 @@ My current research interest mainly lies in generative modeling and agents.
 
 ## Preprints
 
+- **Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding** <br>
+    Zhiwang Zhou\*, **Yuandong Pu\***, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, Wanghan Xu, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai <br>
+    [arxiv](https://arxiv.org/abs/2512.21643) | [paper](https://arxiv.org/abs/2512.21643)
+
+- **UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture** <br>
+    Shuo Cao, Jiayang Li, Xiaohui Li, **Yuandong Pu**, Kaiwen Zhu, Yuanting Gao, Siqi Luo, Yi Xin, Qi Qin, Yu Zhou, Xiangyu Chen, Wenlong Zhang, Bin Fu, Yu Qiao, Yihao Liu <br>
+    [arxiv](https://arxiv.org/abs/2512.21675) | [paper](https://arxiv.org/abs/2512.21675) | [page](https://thunderbolt215.github.io/Unipercept-project/) | [code](https://github.com/thunderbolt215/UniPercept)
+
 - **PICABench: How Far Are We from Physically Realistic Image Editing?** <br>
     **Yuandong Pu**, Le Zhuo, Songhao Han, Jinbo Xing, Kaiwen Zhu, Shuo Cao, Bin Fu, Si Liu, Hongsheng Li, Yu Qiao, Wenlong Zhang, Xi Chen<sup>†</sup>, Yihao Liu<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2510.17681) | [paper](https://arxiv.org/abs/2510.17681) | [page](https://picabench.github.io) |[code](https://github.com/Andrew0613/PICABench) 
@@ -40,7 +48,7 @@ My current research interest mainly lies in generative modeling and agents.
 
 - **Factuality Matters: When Image Generation and Editing Meet Structured Visuals** <br>
     Le Zhuo\*, Songhao Han\*, **Yuandong Pu**, Boxiang Qiu, Sayak Paul, Yue Liao, Yihao Liu, Jie Shao, Xi Chen, Si Liu, Hongsheng Li<sup>†</sup> <br>
-    [arxiv](https://arxiv.org/abs/2510.05091) | [paper](https://arxiv.org/abs/2510.05091) | [page](https://structvisuals.github.io)| [code](https://github.com/zhuole1025/Structured-Visuals)
+    [arxiv](https://arxiv.org/abs/2510.05091) | [paper](https://arxiv.org/abs/2510.05091) | [page](https://structvisuals.github.io) | [code](https://github.com/zhuole1025/Structured-Visuals)
 
 - **Exploring Scalable Unified Modeling for General Low-Level Vision** <br>
     Xiangyu Chen, Kaiwen Zhu, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Wenlong Zhang, Yihao Liu, Yu Qiao, Jiantao Zhou, Chao Dong<sup>†</sup> <br>
