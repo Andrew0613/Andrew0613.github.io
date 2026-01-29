@@ -11,6 +11,7 @@ I am a third-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https:/
 My current research interest mainly lies in generative modeling and agents.
 
 # News
+- **2026-01**: Four papers were accepted to ICLR 2026.
 - **2025-11**: One paper was accepted to AAAI 2026 as oral.
 - **2024-07**: One paper was accepted to ACM MM 2024.
 - **2024-07**: One paper was accepted to ECCV 2024.
@@ -22,33 +23,17 @@ My current research interest mainly lies in generative modeling and agents.
 
 ## Preprints
 
-- **Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding** <br>
-    Zhiwang Zhou\*, **Yuandong Pu\***, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, Wanghan Xu, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai <br>
-    [arxiv](https://arxiv.org/abs/2512.21643) | [paper](https://arxiv.org/abs/2512.21643)
-
 - **UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture** <br>
     Shuo Cao, Jiayang Li, Xiaohui Li, **Yuandong Pu**, Kaiwen Zhu, Yuanting Gao, Siqi Luo, Yi Xin, Qi Qin, Yu Zhou, Xiangyu Chen, Wenlong Zhang, Bin Fu, Yu Qiao, Yihao Liu <br>
     [arxiv](https://arxiv.org/abs/2512.21675) | [paper](https://arxiv.org/abs/2512.21675) | [page](https://thunderbolt215.github.io/Unipercept-project/) | [code](https://github.com/thunderbolt215/UniPercept)
-
-- **PICABench: How Far Are We from Physically Realistic Image Editing?** <br>
-    **Yuandong Pu**, Le Zhuo, Songhao Han, Jinbo Xing, Kaiwen Zhu, Shuo Cao, Bin Fu, Si Liu, Hongsheng Li, Yu Qiao, Wenlong Zhang, Xi Chen<sup>†</sup>, Yihao Liu<sup>†</sup> <br>
-    [arxiv](https://arxiv.org/abs/2510.17681) | [paper](https://arxiv.org/abs/2510.17681) | [page](https://picabench.github.io) |[code](https://github.com/Andrew0613/PICABench) 
 
 - **UniMedVL: Unifying Medical Multimodal Understanding And Generation Through Observation-Knowledge-Analysis** <br>
     Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, **Yuandong Pu**, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2510.15710) | [paper](https://arxiv.org/abs/2510.15710) | [code](https://github.com/uni-medical/UniMedVL)
 
-- **LinearSR: Unlocking Linear Attention for Stable and Efficient Image Super-Resolution** <br>
-    Xiaohui Li, Shaobin Zhuang, Shuo Cao, Yang Yang, **Yuandong Pu**, Qi Qin, Siqi Luo, Bin Fu, Yihao Liu<sup>†</sup> <br>
-    [arxiv](https://arxiv.org/abs/2510.08771) | [paper](https://arxiv.org/abs/2510.08771)
-
 - **Lumina-DiMOO: An Omni Diffusion Large Language Model for Multi-Modal Generation and Understanding** <br>
     Yi Xin, Qi Qin, Siqi Luo, Kaiwen Zhu, Juncheng Yan, Yan Tai, Jiayi Lei, Yuewen Cao, Keqi Wang, Yibin Wang, Jinbin Bai, Qian Yu, Dengyang Jiang, **Yuandong Pu**, Haoxing Chen, Le Zhuo, Junjun He, Gen Luo, Tianbin Li, Ming Hu, Jin Ye, Shenglong Ye, Bo Zhang, Chang Xu, Wenhai Wang, Hongsheng Li, Guangtao Zhai, Tianfan Xue, Bin Fu, Xiaohong Liu, Yu Qiao, Yihao Liu<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2510.06308) | [paper](https://arxiv.org/abs/2510.06308) | [page](https://synbol.github.io/Lumina-DiMOO/) | [code](https://github.com/Alpha-VLLM/Lumina-DiMOO)
-
-- **Factuality Matters: When Image Generation and Editing Meet Structured Visuals** <br>
-    Le Zhuo\*, Songhao Han\*, **Yuandong Pu**, Boxiang Qiu, Sayak Paul, Yue Liao, Yihao Liu, Jie Shao, Xi Chen, Si Liu, Hongsheng Li<sup>†</sup> <br>
-    [arxiv](https://arxiv.org/abs/2510.05091) | [paper](https://arxiv.org/abs/2510.05091) | [page](https://structvisuals.github.io) | [code](https://github.com/zhuole1025/Structured-Visuals)
 
 - **Exploring Scalable Unified Modeling for General Low-Level Vision** <br>
     Xiangyu Chen, Kaiwen Zhu, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Wenlong Zhang, Yihao Liu, Yu Qiao, Jiantao Zhou, Chao Dong<sup>†</sup> <br>
@@ -63,6 +48,26 @@ My current research interest mainly lies in generative modeling and agents.
     [arxiv](https://arxiv.org/abs/2504.04903) | [paper](https://arxiv.org/abs/2504.04903) | [page](https://andrew0613.github.io/OmniLV_page/)
 
 ## Conference Papers
+
+- **Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding** <br>
+    Zhiwang Zhou\*, **Yuandong Pu\***, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, Wanghan Xu, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai <br>
+    ICLR 2026 <br>
+    [arxiv](https://arxiv.org/abs/2512.21643) | [paper](https://arxiv.org/pdf/2512.21643)
+
+- **PICABench: How Far Are We from Physically Realistic Image Editing?** <br>
+    **Yuandong Pu**, Le Zhuo, Songhao Han, Jinbo Xing, Kaiwen Zhu, Shuo Cao, Bin Fu, Si Liu, Hongsheng Li, Yu Qiao, Wenlong Zhang, Xi Chen<sup>†</sup>, Yihao Liu<sup>†</sup> <br>
+    ICLR 2026 <br>
+    [arxiv](https://arxiv.org/abs/2510.17681) | [paper](https://arxiv.org/pdf/2510.17681) | [page](https://picabench.github.io) | [code](https://github.com/Andrew0613/PICABench) 
+
+- **LinearSR: Unlocking Linear Attention for Stable and Efficient Image Super-Resolution** <br>
+    Xiaohui Li, Shaobin Zhuang, Shuo Cao, Yang Yang, **Yuandong Pu**, Qi Qin, Siqi Luo, Bin Fu, Yihao Liu<sup>†</sup> <br>
+    ICLR 2026 <br>
+    [arxiv](https://arxiv.org/abs/2510.08771) | [paper](https://arxiv.org/pdf/2510.08771)
+
+- **Factuality Matters: When Image Generation and Editing Meet Structured Visuals** <br>
+    Le Zhuo\*, Songhao Han\*, **Yuandong Pu**, Boxiang Qiu, Sayak Paul, Yue Liao, Yihao Liu, Jie Shao, Xi Chen, Si Liu, Hongsheng Li<sup>†</sup> <br>
+    ICLR 2026 <br>
+    [arxiv](https://arxiv.org/abs/2510.05091) | [paper](https://arxiv.org/abs/2510.05091) | [page](https://structvisuals.github.io) | [code](https://github.com/zhuole1025/Structured-Visuals)
 
 - **SynWeather: Weather Observation Data Synthesis across Multiple Regions and Variables via a General Diffusion Transformer** <br>
     Kaiyi Xu, Junchao Gong, Zhiwang Zhou, Zhangrui Li, **Yuandong Pu**, Yihao Liu, Ben Fei, Fenghua Ling, Wenlong Zhang, Lei Bai <br>
