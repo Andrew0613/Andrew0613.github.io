@@ -11,6 +11,7 @@ I am a third-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https:/
 My current research interest mainly lies in generative modeling and agents.
 
 # News
+- **2026-02**: One paper was accepted to CVPR 2026.
 - **2026-01**: Four papers were accepted to ICLR 2026.
 - **2025-11**: One paper was accepted to AAAI 2026 as oral.
 - **2024-07**: One paper was accepted to ACM MM 2024.
@@ -22,6 +23,10 @@ My current research interest mainly lies in generative modeling and agents.
 \*: Equal Contribution, †: Corresponding Author
 
 ## Preprints
+
+- **Accelerating Masked Image Generation by Learning Latent Controlled Dynamics** <br>
+    Kaiwen Zhu, Quansheng Zeng, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Yi Xin, Qi Qin, Jiayang Li, Yu Qiao, Jinjin Gu, Yihao Liu <br>
+    [arxiv](https://arxiv.org/abs/2602.23996) | [paper](https://arxiv.org/pdf/2602.23996) | [code](https://github.com/Kaiwen-Zhu/MIGM-Shortcut)
 
 - **UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture** <br>
     Shuo Cao, Jiayang Li, Xiaohui Li, **Yuandong Pu**, Kaiwen Zhu, Yuanting Gao, Siqi Luo, Yi Xin, Qi Qin, Yu Zhou, Xiangyu Chen, Wenlong Zhang, Bin Fu, Yu Qiao, Yihao Liu <br>
@@ -39,15 +44,16 @@ My current research interest mainly lies in generative modeling and agents.
     Xiangyu Chen, Kaiwen Zhu, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Wenlong Zhang, Yihao Liu, Yu Qiao, Jiantao Zhou, Chao Dong<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2507.14801) | [paper](https://arxiv.org/abs/2507.14801)
 
-- **ArtiMuse: Fine-Grained Image Aesthetics Assessment with Joint Scoring and Expert-Level Understanding** <br>
-    Shuo Cao, Nan Ma, Jiayang Li, Xiaohui Li, Lihao Shao, Kaiwen Zhu, Yu Zhou, **Yuandong Pu**, Jiarui Wu, Jiaquan Wang, Bo Qu, Wenhai Wang, Yu Qiao, Dajuin Yao, Yihao Liu<sup>†</sup> <br>
-    [arxiv](https://arxiv.org/abs/2507.14533) | [paper](https://arxiv.org/abs/2507.14533) | [page](https://thunderbolt215.github.io/ArtiMuse-project/) | [code](https://github.com/thunderbolt215/ArtiMuse)
-
 - **Lumina-OmniLV: A Unified Multimodal Framework for General Low-Level Vision** <br>
     **Yuandong Pu**, Le Zhuo, Kaiwen Zhu, Liangbin Xie, Wenlong Zhang, Xiangyu Chen, Peng Gao, Yu Qiao, Chao Dong, Yihao Liu<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2504.04903) | [paper](https://arxiv.org/abs/2504.04903) | [page](https://andrew0613.github.io/OmniLV_page/)
 
 ## Conference Papers
+
+- **ArtiMuse: Fine-Grained Image Aesthetics Assessment with Joint Scoring and Expert-Level Understanding** <br>
+    Shuo Cao, Nan Ma, Jiayang Li, Xiaohui Li, Lihao Shao, Kaiwen Zhu, Yu Zhou, **Yuandong Pu**, Jiarui Wu, Jiaquan Wang, Bo Qu, Wenhai Wang, Yu Qiao, Dajuin Yao, Yihao Liu<sup>†</sup> <br>
+    CVPR 2026 <br>
+    [arxiv](https://arxiv.org/abs/2507.14533) | [paper](https://arxiv.org/abs/2507.14533) | [page](https://thunderbolt215.github.io/ArtiMuse-project/) | [code](https://github.com/thunderbolt215/ArtiMuse)
 
 - **Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding** <br>
     Zhiwang Zhou\*, **Yuandong Pu\***, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, Wanghan Xu, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai <br>
@@ -94,4 +100,4 @@ My current research interest mainly lies in generative modeling and agents.
   Sep. 2019 - Jun. 2023 <br>
   GPA: 3.8 / 4.0, **Ranking: 1 / 79**
 
-(last updated: Nov 2025)
+(last updated: Mar 2026)
