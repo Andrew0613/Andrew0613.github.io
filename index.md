@@ -11,6 +11,7 @@ I am a third-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https:/
 My current research interest mainly lies in generative modeling and agents.
 
 # News
+- **2026-05**: Three papers were accepted to ICML 2026.
 - **2026-02**: One paper was accepted to CVPR 2026.
 - **2026-01**: Four papers were accepted to ICLR 2026.
 - **2025-11**: One paper was accepted to AAAI 2026 as oral.
@@ -28,14 +29,6 @@ My current research interest mainly lies in generative modeling and agents.
     Kaiwen Zhu, Quansheng Zeng, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Yi Xin, Qi Qin, Jiayang Li, Yu Qiao, Jinjin Gu, Yihao Liu <br>
     [arxiv](https://arxiv.org/abs/2602.23996) | [paper](https://arxiv.org/pdf/2602.23996) | [code](https://github.com/Kaiwen-Zhu/MIGM-Shortcut)
 
-- **UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture** <br>
-    Shuo Cao, Jiayang Li, Xiaohui Li, **Yuandong Pu**, Kaiwen Zhu, Yuanting Gao, Siqi Luo, Yi Xin, Qi Qin, Yu Zhou, Xiangyu Chen, Wenlong Zhang, Bin Fu, Yu Qiao, Yihao Liu <br>
-    [arxiv](https://arxiv.org/abs/2512.21675) | [paper](https://arxiv.org/abs/2512.21675) | [page](https://thunderbolt215.github.io/Unipercept-project/) | [code](https://github.com/thunderbolt215/UniPercept)
-
-- **UniMedVL: Unifying Medical Multimodal Understanding And Generation Through Observation-Knowledge-Analysis** <br>
-    Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, **Yuandong Pu**, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He<sup>†</sup> <br>
-    [arxiv](https://arxiv.org/abs/2510.15710) | [paper](https://arxiv.org/abs/2510.15710) | [code](https://github.com/uni-medical/UniMedVL)
-
 - **Lumina-DiMOO: An Omni Diffusion Large Language Model for Multi-Modal Generation and Understanding** <br>
     Yi Xin, Qi Qin, Siqi Luo, Kaiwen Zhu, Juncheng Yan, Yan Tai, Jiayi Lei, Yuewen Cao, Keqi Wang, Yibin Wang, Jinbin Bai, Qian Yu, Dengyang Jiang, **Yuandong Pu**, Haoxing Chen, Le Zhuo, Junjun He, Gen Luo, Tianbin Li, Ming Hu, Jin Ye, Shenglong Ye, Bo Zhang, Chang Xu, Wenhai Wang, Hongsheng Li, Guangtao Zhai, Tianfan Xue, Bin Fu, Xiaohong Liu, Yu Qiao, Yihao Liu<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2510.06308) | [paper](https://arxiv.org/abs/2510.06308) | [page](https://synbol.github.io/Lumina-DiMOO/) | [code](https://github.com/Alpha-VLLM/Lumina-DiMOO)
@@ -49,6 +42,16 @@ My current research interest mainly lies in generative modeling and agents.
     [arxiv](https://arxiv.org/abs/2504.04903) | [paper](https://arxiv.org/abs/2504.04903) | [page](https://andrew0613.github.io/OmniLV_page/)
 
 ## Conference Papers
+
+- **UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture** <br>
+    Shuo Cao, Jiayang Li, Xiaohui Li, **Yuandong Pu**, Kaiwen Zhu, Yuanting Gao, Siqi Luo, Yi Xin, Qi Qin, Yu Zhou, Xiangyu Chen, Wenlong Zhang, Bin Fu, Yu Qiao, Yihao Liu <br>
+    ICML 2026 Spotlight<br>
+    [arxiv](https://arxiv.org/abs/2512.21675) | [paper](https://arxiv.org/abs/2512.21675) | [page](https://thunderbolt215.github.io/Unipercept-project/) | [code](https://github.com/thunderbolt215/UniPercept)
+
+- **UniMedVL: Unifying Medical Multimodal Understanding And Generation Through Observation-Knowledge-Analysis** <br>
+    Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, **Yuandong Pu**, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He<sup>†</sup> <br>
+    ICML 2026 <br>
+    [arxiv](https://arxiv.org/abs/2510.15710) | [paper](https://arxiv.org/abs/2510.15710) | [code](https://github.com/uni-medical/UniMedVL)
 
 - **ArtiMuse: Fine-Grained Image Aesthetics Assessment with Joint Scoring and Expert-Level Understanding** <br>
     Shuo Cao, Nan Ma, Jiayang Li, Xiaohui Li, Lihao Shao, Kaiwen Zhu, Yu Zhou, **Yuandong Pu**, Jiarui Wu, Jiaquan Wang, Bo Qu, Wenhai Wang, Yu Qiao, Dajuin Yao, Yihao Liu<sup>†</sup> <br>
