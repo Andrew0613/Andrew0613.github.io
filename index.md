@@ -11,6 +11,7 @@ I am a third-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https:/
 My current research interest mainly lies in generative modeling and agents.
 
 # News
+- **2026-06**: One paper was accepted to ECCV 2026.
 - **2026-05**: Three papers were accepted to ICML 2026.
 - **2026-02**: One paper was accepted to CVPR 2026.
 - **2026-01**: Four papers were accepted to ICLR 2026.
@@ -37,11 +38,12 @@ My current research interest mainly lies in generative modeling and agents.
     Xiangyu Chen, Kaiwen Zhu, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Wenlong Zhang, Yihao Liu, Yu Qiao, Jiantao Zhou, Chao Dong<sup>†</sup> <br>
     [arxiv](https://arxiv.org/abs/2507.14801) | [paper](https://arxiv.org/abs/2507.14801)
 
+## Conference Papers
+
 - **Lumina-OmniLV: A Unified Multimodal Framework for General Low-Level Vision** <br>
     **Yuandong Pu**, Le Zhuo, Kaiwen Zhu, Liangbin Xie, Wenlong Zhang, Xiangyu Chen, Peng Gao, Yu Qiao, Chao Dong, Yihao Liu<sup>†</sup> <br>
+    ECCV 2026 <br>
     [arxiv](https://arxiv.org/abs/2504.04903) | [paper](https://arxiv.org/abs/2504.04903) | [page](https://andrew0613.github.io/OmniLV_page/)
-
-## Conference Papers
 
 - **UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture** <br>
     Shuo Cao, Jiayang Li, Xiaohui Li, **Yuandong Pu**, Kaiwen Zhu, Yuanting Gao, Siqi Luo, Yi Xin, Qi Qin, Yu Zhou, Xiangyu Chen, Wenlong Zhang, Bin Fu, Yu Qiao, Yihao Liu <br>
@@ -103,4 +105,4 @@ My current research interest mainly lies in generative modeling and agents.
   Sep. 2019 - Jun. 2023 <br>
   GPA: 3.8 / 4.0, **Ranking: 1 / 79**
 
-(last updated: Mar 2026)
+(last updated: Jun 2026)
