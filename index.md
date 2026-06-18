@@ -27,7 +27,7 @@ My current research interest mainly lies in generative modeling and agents.
 ## Preprints
 
 - **Faithful, Enriched, and Precise: Benchmarking Natural-Science Illustration Generation by T2I models** <br>
-    Deying Kong, Wenyi Tang, Haoning Chen, **Yuandong Pu**, Qing Yang, Xiaohong Liu, Siqi Luo, Wenlong Zhang, Guangtao Zhai <br>
+    Yifan Chang, Jiaxin Ai, Jianwen Sun, **Yuandong Pu**, Siqi Luo, Liangliang Zhao, Yuchen Ren, Minghao Liu, Yunfei Yu, Yu Qiao, Kaipeng Zhang, Yihao Liu <br>
     [arxiv](https://arxiv.org/abs/2606.05949) | [paper](https://arxiv.org/pdf/2606.05949)
 
 - **Accelerating Masked Image Generation by Learning Latent Controlled Dynamics** <br>
