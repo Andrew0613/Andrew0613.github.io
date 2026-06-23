@@ -12,6 +12,7 @@ My current research interest mainly lies in generative modeling and agents.
 
 # News
 - **2026-06**: One paper was accepted to ECCV 2026.
+- **2026-05**: Recognized as a Gold Reviewer for ICML 2026.
 - **2026-05**: Three papers were accepted to ICML 2026.
 - **2026-02**: One paper was accepted to CVPR 2026.
 - **2026-01**: Four papers were accepted to ICLR 2026.
@@ -98,6 +99,12 @@ My current research interest mainly lies in generative modeling and agents.
     Xiangyu Chen\*, Zheyuan Li\*, **Yuandong Pu\***, Yihao Liu, Jiantao Zhou, Yu Qiao, Chao Dong† <br>
     ECCV 2024 <br>
     [arxiv](https://arxiv.org/abs/2310.11881) | [paper](https://arxiv.org/abs/2310.11881) | [code](https://github.com/Andrew0613/X-Restormer)
+
+# Academic Service
+
+- **Gold Reviewer**: ICML 2026
+- **Reviewer**: ICML 2026, ICLR 2026, ICCV 2025
+- **Area Chair**: 2nd Workshop on Human-Interactive Generation and Editing
 
 # Education
 
