@@ -28,6 +28,14 @@ My current research interest mainly lies in generative modeling and agents.
 
 ## Preprints
 
+- **Towards Physics-Faithful Generation of Scientific Diagrams** <br>
+    Minghui Zhang, Jinxin Shi, Yifan Chang, Liangliang Zhao, **Yuandong Pu**, Qian Yu, Ming Hu, Hanxiao Zhang, Yun Gu, Yirong Chen, Yu Qiao, Bo Zhang, Xiangchao Yan, Bin Fu, Yihao Liu <br>
+    [arxiv](https://arxiv.org/abs/2608.13112) | [paper](https://arxiv.org/pdf/2608.13112)
+
+- **AcoustiTrace: When Plausible Sound Violates Physics** <br>
+    Shiyang Li, Yuewen Cao, Yihao Liu, **Yuandong Pu**, Baochang Zhang, Xiaofei Li, Changqing Zou <br>
+    [arxiv](https://arxiv.org/abs/2608.02035) | [paper](https://arxiv.org/pdf/2608.02035)
+
 - **Are Text-to-Image Models Inductivist Turkeys? A Counterfactual Benchmark for Causal Reasoning** <br>
     Jiayi Lei, **Yuandong Pu**, Xingyu Han, Rongpeng Zhu, Jing Xu, Jinyao Wang, Zijian Zhou, Bin Fu, Yuewen Cao, Yihao Liu, Hongsheng Li <br>
     [arxiv](https://arxiv.org/abs/2606.24548) | [paper](https://arxiv.org/pdf/2606.24548) | [page](https://jylei16.github.io/CF-World.github.io/)
@@ -130,4 +138,4 @@ My current research interest mainly lies in generative modeling and agents.
   Sep. 2019 - Jun. 2023 <br>
   GPA: 3.8 / 4.0, **Ranking: 1 / 79**
 
-(last updated: Jul 2026)
+(last updated: Aug 2026)
