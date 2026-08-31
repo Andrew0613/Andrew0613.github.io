@@ -28,6 +28,10 @@ My current research interest mainly lies in generative modeling and agents.
 
 ## Preprints
 
+- **PAWBench: How Far Are We from Probabilistically Aligned World Modeling?** <br>
+    **Yuandong Pu**, Le Zhuo, Sayak Paul, Gabriel Jorge Menezes, Avram Đorđević, Shiyang Li, Yifan Zhou, Bin Fu, Wenlong Zhang, Junjun He, Yu Qiao, Yihao Liu<sup>†</sup>, Jinbo Xing, Xi Chen<sup>†</sup> <br>
+    [arxiv](https://arxiv.org/abs/2608.27345) | [paper](https://arxiv.org/pdf/2608.27345) | [page](https://pawbench.github.io/) | [code](https://github.com/Andrew0613/PAWBench) | [benchmark](https://huggingface.co/datasets/Andrew613/PAWBench)
+
 - **Towards Physics-Faithful Generation of Scientific Diagrams** <br>
     Minghui Zhang, Jinxin Shi, Yifan Chang, Liangliang Zhao, **Yuandong Pu**, Qian Yu, Ming Hu, Hanxiao Zhang, Yun Gu, Yirong Chen, Yu Qiao, Bo Zhang, Xiangchao Yan, Bin Fu, Yihao Liu <br>
     [arxiv](https://arxiv.org/abs/2608.13112) | [paper](https://arxiv.org/pdf/2608.13112)
