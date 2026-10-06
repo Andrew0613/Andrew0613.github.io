@@ -11,6 +11,7 @@ I am a third-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https:/
 My current research interest mainly lies in generative modeling and agents.
 
 # News
+- **2026-09**: One paper was accepted to NeurIPS 2026.
 - **2026-07**: One paper was accepted to ACM MM 2026.
 - **2026-06**: One paper was accepted to ECCV 2026.
 - **2026-05**: Recognized as a Gold Reviewer for ICML 2026.
@@ -40,10 +41,6 @@ My current research interest mainly lies in generative modeling and agents.
     Shiyang Li, Yuewen Cao, Yihao Liu, **Yuandong Pu**, Baochang Zhang, Xiaofei Li, Changqing Zou <br>
     [arxiv](https://arxiv.org/abs/2608.02035) | [paper](https://arxiv.org/pdf/2608.02035)
 
-- **Are Text-to-Image Models Inductivist Turkeys? A Counterfactual Benchmark for Causal Reasoning** <br>
-    Jiayi Lei, **Yuandong Pu**, Xingyu Han, Rongpeng Zhu, Jing Xu, Jinyao Wang, Zijian Zhou, Bin Fu, Yuewen Cao, Yihao Liu, Hongsheng Li <br>
-    [arxiv](https://arxiv.org/abs/2606.24548) | [paper](https://arxiv.org/pdf/2606.24548) | [page](https://jylei16.github.io/CF-World.github.io/)
-
 - **Faithful, Enriched, and Precise: Benchmarking Natural-Science Illustration Generation by T2I models** <br>
     Yifan Chang, Jiaxin Ai, Jianwen Sun, **Yuandong Pu**, Siqi Luo, Liangliang Zhao, Yuchen Ren, Minghao Liu, Yunfei Yu, Yu Qiao, Kaipeng Zhang, Yihao Liu <br>
     [arxiv](https://arxiv.org/abs/2606.05949) | [paper](https://arxiv.org/pdf/2606.05949)
@@ -65,6 +62,11 @@ My current research interest mainly lies in generative modeling and agents.
     [arxiv](https://arxiv.org/abs/2507.14801) | [paper](https://arxiv.org/abs/2507.14801)
 
 ## Conference Papers
+
+- **Are Text-to-Image Models Inductivist Turkeys? A Counterfactual Benchmark for Causal Reasoning** <br>
+    Jiayi Lei, **Yuandong Pu**, Xingyu Han, Rongpeng Zhu, Jing Xu, Jinyao Wang, Zijian Zhou, Bin Fu, Yuewen Cao, Yihao Liu, Hongsheng Li <br>
+    NeurIPS 2026 <br>
+    [arxiv](https://arxiv.org/abs/2606.24548) | [paper](https://arxiv.org/pdf/2606.24548) | [page](https://jylei16.github.io/CF-World.github.io/)
 
 - **Accelerating Masked Image Generation by Learning Latent Controlled Dynamics** <br>
     Kaiwen Zhu, Quansheng Zeng, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Yi Xin, Qi Qin, Jiayang Li, Yu Qiao, Jinjin Gu, Yihao Liu <br>
@@ -142,4 +144,4 @@ My current research interest mainly lies in generative modeling and agents.
   Sep. 2019 - Jun. 2023 <br>
   GPA: 3.8 / 4.0, **Ranking: 1 / 79**
 
-(last updated: Aug 2026)
+(last updated: Oct 2026)
