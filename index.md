@@ -6,11 +6,12 @@ permalink: /index.html
 
 <img style="float:right; padding-left:10px" src="images/puyuandong.jpg" width="310" height="300">
 
-I am a third-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https://www.sjtu.edu.cn)). I am supervised by Prof. [Chao Dong](https://xpixel.group/2010/01/20/chaodong.html). Prior to that, I received my B.Eng. from Beijing Institute of Technology ([BIT](https://www.bit.edu.cn)) in 2023.
+I am a fourth-year Ph.D. student of Shanghai Jiao Tong University ([SJTU](https://www.sjtu.edu.cn)). I am supervised by Prof. [Chao Dong](https://xpixel.group/2010/01/20/chaodong.html). Prior to that, I received my B.Eng. from Beijing Institute of Technology ([BIT](https://www.bit.edu.cn)) in 2023.
 
 My current research interest mainly lies in generative modeling and agents.
 
 # News
+- **2026-10**: Our technical report on [Intern Lumina U2](https://arxiv.org/abs/2610.20818) is now available.
 - **2026-09**: One paper was accepted to NeurIPS 2026.
 - **2026-07**: One paper was accepted to ACM MM 2026.
 - **2026-06**: One paper was accepted to ECCV 2026.
@@ -28,6 +29,10 @@ My current research interest mainly lies in generative modeling and agents.
 \*: Equal Contribution, †: Corresponding Author
 
 ## Preprints
+
+- **Intern Lumina U2: A Multi-Codebook Diffusion Large Language Model for Omni-Visual Understanding and Image Generation** <br>
+    Qian Yu, Zongyang Qiu, Juncheng Yan, Hongliang Li, Qi Qin, Keqi Wang, Siqi Luo, Junkui Ju, Yapeng Mi, Tiantian Lu, Tian Liu, Pengyu Xie, Chenhao Ji, Minghui Zhang, Yiang Zhao, Siyu Yan, Haiying Xu, Yanbo Wang, Jianghan Shen, **Yuandong Pu**, Jiayi Lei, Borui Zhang, Jinxin Shi, Bo Zhang, Yuhang Zang, Shenglong Ye, Lixin Gu, Hongjie Zhang, Linghan Liu, Xinyuan Chen, Yuewen Cao, Lihe Zhang, Xiaohong Liu, Junjun He, Qiangwei Liu, Qi Zhang, Yu Cheng, Tianfan Xue, Hui Xiong, Chang Xu, Yu Qiao, Yihao Liu, Bin Fu <br>
+    [arxiv](https://arxiv.org/abs/2610.20818) | [paper](https://arxiv.org/pdf/2610.20818) | [page](https://internlm.github.io/InternLumina-U2/) | [code](https://github.com/InternLM/InternLumina-U2)
 
 - **PAWBench: How Far Are We from Probabilistically Aligned World Modeling?** <br>
     **Yuandong Pu**, Le Zhuo, Sayak Paul, Gabriel Jorge Menezes, Avram Đorđević, Shiyang Li, Yifan Zhou, Bin Fu, Wenlong Zhang, Junjun He, Yu Qiao, Yihao Liu<sup>†</sup>, Jinbo Xing, Xi Chen<sup>†</sup> <br>
@@ -68,8 +73,8 @@ My current research interest mainly lies in generative modeling and agents.
     NeurIPS 2026 <br>
     [arxiv](https://arxiv.org/abs/2606.24548) | [paper](https://arxiv.org/pdf/2606.24548) | [page](https://jylei16.github.io/CF-World.github.io/)
 
-- **Accelerating Masked Image Generation by Learning Latent Controlled Dynamics** <br>
-    Kaiwen Zhu, Quansheng Zeng, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Yi Xin, Qi Qin, Jiayang Li, Yu Qiao, Jinjin Gu, Yihao Liu <br>
+- **Accelerating Masked Image Generation by Learning Controlled Latent Dynamics** <br>
+    Kaiwen Zhu, Quansheng Zeng, **Yuandong Pu**, Shuo Cao, Xiaohui Li, Yi Xin, Qi Qin, Jiayang Li, Juncheng Yan, Yu Qiao, Jinjin Gu, Yihao Liu <br>
     ACM MM 2026 <br>
     [arxiv](https://arxiv.org/abs/2602.23996) | [paper](https://arxiv.org/pdf/2602.23996) | [code](https://github.com/Kaiwen-Zhu/MIGM-Shortcut)
 
@@ -87,6 +92,11 @@ My current research interest mainly lies in generative modeling and agents.
     Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, **Yuandong Pu**, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He<sup>†</sup> <br>
     ICML 2026 <br>
     [arxiv](https://arxiv.org/abs/2510.15710) | [paper](https://arxiv.org/abs/2510.15710) | [code](https://github.com/uni-medical/UniMedVL)
+
+- **MICE-Bench: A Challenging and Comprehensive Benchmark for Multi-Reference Image Creation and Editing** <br>
+    Siqi Luo, Huayu Zheng, Jianghan Shen, Yi Xin, Luxin Xu, Jiyao Liu, Xinyu Zhang, Hang Zhou, Pengyu Xie, Xiaohui Li, Shuo Cao, **Yuandong Pu**, Junjun He, Bin Fu, Yihao Liu, Yu Qiao, Guangtao Zhai, Yuewen Cao, Xiaohong Liu <br>
+    ICML 2026 <br>
+    [openreview](https://openreview.net/forum?id=2p9PIlKD6q) | [paper](https://openreview.net/pdf?id=2p9PIlKD6q)
 
 - **ArtiMuse: Fine-Grained Image Aesthetics Assessment with Joint Scoring and Expert-Level Understanding** <br>
     Shuo Cao, Nan Ma, Jiayang Li, Xiaohui Li, Lihao Shao, Kaiwen Zhu, Yu Zhou, **Yuandong Pu**, Jiarui Wu, Jiaquan Wang, Bo Qu, Wenhai Wang, Yu Qiao, Dajuin Yao, Yihao Liu<sup>†</sup> <br>
@@ -121,7 +131,7 @@ My current research interest mainly lies in generative modeling and agents.
 - **Learning A Low-Level Vision Generalist via Visual Task Prompt** <br>
     Xiangyu Chen, Yihao Liu, **Yuandong Pu**, Wenlong Zhang, Jiantao Zhou, Yu Qiao, Chao Dong† <br>
     ACM MM 2024 <br>
-    [arxiv](https://arxiv.org/abs/2408.03248) | [paper](https://arxiv.org/abs/2408.03248)
+    [arxiv](https://arxiv.org/abs/2408.08601) | [paper](https://arxiv.org/pdf/2408.08601)
 
 - **A Comparative Study of Image Restoration Networks for General Backbone Network Design** <br>
     Xiangyu Chen\*, Zheyuan Li\*, **Yuandong Pu\***, Yihao Liu, Jiantao Zhou, Yu Qiao, Chao Dong† <br>
@@ -144,4 +154,4 @@ My current research interest mainly lies in generative modeling and agents.
   Sep. 2019 - Jun. 2023 <br>
   GPA: 3.8 / 4.0, **Ranking: 1 / 79**
 
-(last updated: Oct 2026)
+(last updated: Oct 26, 2026)
